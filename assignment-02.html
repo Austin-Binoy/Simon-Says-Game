@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <link rel="stylesheet" href="assignment-02.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@
         <div class="timer">
             <div class="display">
                 <div class="highscore">00</div>
-                <button class="start">Start</button>
+                <button class="start" onclick="panelClicked(event.currentTarget)">Start</button>
                 <div class="score">00</div> 
             </div>
 
@@ -28,15 +29,15 @@
             
 
             <div class="buttons">
-                <button class="shape one"></button>
-                <button class="shape two"></button>
-                <button class="shape three"></button>
-                <button class="shape four"></button>
+                <button class="shape one active" onclick="panelClicked(event.currentTarget)"></button>
+                <button class="shape two active" onclick="panelClicked(event.currentTarget)"></button>
+                <button class="shape three active" onclick="panelClicked(event.currentTarget)"></button>
+                <button class="shape four active" onclick="panelClicked(event.currentTarget)"></button>
             </div>
         </div>
 
 
         
     </section>
-    <script src="assignment-02.js"></script></body>
+    <script src="/Assignment-02-22483344/Simon-Says-Game/assignment-02.js"></script></body>
 </html>

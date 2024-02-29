@@ -45,13 +45,19 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-width: 5px;
 
 }
-.shape .active{
-    background-color: aliceblue;
+/* Define other styles as before */
+
+/* Override styles for .active class */
+.shape.active {
+    background-color: aliceblue; /* Example active color, this will be visible when the class is applied */
+    background-image: none; /* Remove gradient background when active */
 }
 
 
 
-.timer .one{
+
+
+.one{
     border-radius: 50%;
     height: 250px;
     width: 250px;
@@ -66,7 +72,7 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
-.timer .two{
+.two{
     border-radius: 50%;
     height: 250px;
     width: 250px;
@@ -81,7 +87,7 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
-.timer .three{
+.three{
     border-radius: 50%;
     height: 250px;
     width: 250px;
@@ -96,7 +102,7 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
-.timer .four{
+.four{
     border-radius: 50%;
     height: 250px;
     width: 250px;
