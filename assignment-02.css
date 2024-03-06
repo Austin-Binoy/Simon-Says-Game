@@ -5,24 +5,6 @@
 body{
     background-color: rgb(255, 255, 255);
 }
-/*
-.header{
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo{
-    font-weight: 600;
-    font-size: 30px;
-    color: rgb(140, 0, 255);
-    text-decoration: none;
-}
-*/
 
 
 .game{
@@ -53,6 +35,11 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     background-image: none; /* Remove gradient background when active */
 }
 
+.shape:active{
+    background-color: aliceblue; /* Example active color, this will be visible when the class is applied */
+    background-image: none; /* Remove gradient background when active */
+
+}
 
 
 
@@ -68,9 +55,6 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-width: 15px;
     background-image: linear-gradient(white, rgb(0, 255, 0));
 }
-.one:active{
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
-}
 
 .two{
     border-radius: 50%;
@@ -82,9 +66,6 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-style: outset;
     outline-width: 15px;
     background-image: linear-gradient(white, rgb(255, 0, 0));
-}
-.two:active{
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
 .three{
@@ -98,9 +79,7 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-width: 15px;
     background-image: linear-gradient(rgb(255, 255, 255), rgb(0, 4, 255));
 }
-.three:active{
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
-}
+
 
 .four{
     border-radius: 50%;
@@ -113,9 +92,7 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-width: 15px;
     background-image: linear-gradient(white, rgb(255, 230, 0));
 }
-.four:active{
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
-}
+
 
 .timer .display{
     position: absolute;

@@ -179,7 +179,7 @@ function startGame() {
           highScore = currentScore; // Updates the high score
         }
         document.querySelector(".score").textContent = currentScore.toString(); // Update the score display
-        document.querySelector(".highScore").textContent = highScore.toString(); // Update the high score display
+        document.querySelector(".highscore").textContent = highScore.toString(); // Update the high score display
         clearTimeout(responseTimeout); // Clear the "Too slow" timeout
         startFlashing(); // Start flashing the new sequence including the new panel
       }
