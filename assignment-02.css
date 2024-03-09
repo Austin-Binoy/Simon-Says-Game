@@ -17,27 +17,25 @@ body{
     border-radius: 50%;
     height: 500px;
     width: 500px;
-position: fixed;
-top: 50%;
-left: 50%;
-margin-top: -250px;
-margin-left: -250px;
-background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+    background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-style:groove;
     outline-width: 5px;
 
 }
-/* Define other styles as before */
 
-/* Override styles for .active class */
 .shape.active {
-    background-color: aliceblue; /* Example active color, this will be visible when the class is applied */
-    background-image: none; /* Remove gradient background when active */
+    background-color: aliceblue; 
+    background-image: none; 
 }
 
 .shape:active{
-    background-color: aliceblue; /* Example active color, this will be visible when the class is applied */
-    background-image: none; /* Remove gradient background when active */
+    background-color: aliceblue; 
+    background-image: none; 
 
 }
 
@@ -54,6 +52,7 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-style: outset;
     outline-width: 15px;
     background-image: linear-gradient(white, rgb(0, 255, 0));
+    cursor: pointer;
 }
 
 .two{
@@ -66,6 +65,8 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-style: outset;
     outline-width: 15px;
     background-image: linear-gradient(white, rgb(255, 0, 0));
+    cursor: pointer;
+
 }
 
 .three{
@@ -78,6 +79,8 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-style: outset;
     outline-width: 15px;
     background-image: linear-gradient(rgb(255, 255, 255), rgb(0, 4, 255));
+    cursor: pointer;
+
 }
 
 
@@ -91,6 +94,8 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     outline-style: outset;
     outline-width: 15px;
     background-image: linear-gradient(white, rgb(255, 230, 0));
+    cursor: pointer;
+
 }
 
 
@@ -111,6 +116,8 @@ background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
     margin-left: 10px;
     margin-right: 10px;
     font-size: 35px;
+    cursor: pointer;
+
 }
 .display .highscore{
     font-size: 40px;

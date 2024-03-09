@@ -1,4 +1,8 @@
 /*
+
+FIRST CODE OF JAVASFRIPT THAT WASN'T WORKING
+
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const topLeft = document.querySelector(".one");
     const topRight = document.querySelector(".two");
@@ -32,7 +36,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             await flash(panel);
         }
 
-        // Now, we will remove the 'active' class from all buttons to revert to original color
         const allPanels = [topLeft, topRight, bottomLeft, bottomRight];
         allPanels.forEach(panel => panel.classList.remove('active'));
     };
@@ -42,29 +45,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
 */
 
 
-//When the start button is pressed the following code runs
 function startGame() {
-    //Gets the red button from html
     const startCircle = document.getElementById('light');
-    //Ensures when game is started or restarted the sign to start is red
     startCircle.style.backgroundColor = "red";
-    //unsures player cannot press anything during sequence 
     canClick = false;
     clearTimeout(responseTimeout);
   
-    // Reset the sequence back to 0 colors pattern and adds one color to the pattern and changes score to 0 while ensuring user cant click
-    sequence.length = 0; // Clear the sequence array
-    sequence.push(getRandomPanel()); // Start with a new random panel
-    sequenceToGuess = [...sequence]; // Reset the sequence to guess
-    currentScore = 0; // Reset the current score
+    sequence.length = 0; 
+    sequence.push(getRandomPanel()); 
+    sequenceToGuess = [...sequence]; 
+    currentScore = 0; 
     document.querySelector(".score").textContent = '00'; // Reset the score to display 00 again
-    canClick = false; // Prevent clicking during the setup
+    canClick = false; 
   
-    //wait for the game to start after pressing start
     setTimeout(function() {
       startCircle.style.backgroundColor = "green"; // changes color to green to show game start
-      startFlashing(); // start flashing the sequence when the game starts shown by green button
-    }, 3000); //wait 3 seconds e.g. 3000ms
+      startFlashing();
+    }, 3000); //wait 3 seconds
   }
   
   //show the sequence then allow the user to click the buttons
@@ -111,10 +108,10 @@ function startGame() {
   
   
   
-  const greenButton = document.querySelector('.one'); // gets the green button in a variable
-  const redButton = document.querySelector('.two'); // gets the red button in a variable
-  const blueButton = document.querySelector('.three'); // gets the blue button in a variable
-  const yellowButton = document.querySelector('.four'); // gets the yellow button in a variable
+  const greenButton = document.querySelector('.one'); 
+  const redButton = document.querySelector('.two'); 
+  const blueButton = document.querySelector('.three'); 
+  const yellowButton = document.querySelector('.four'); 
   
   
   
@@ -133,14 +130,11 @@ function startGame() {
     getRandomPanel()
   ];
   
-  //ensures user guesses the exact sequence which was randomly made
   let sequenceToGuess = [...sequence];
   
-  //Changes flashing speed depending on score of user
   const flash = panel => {
     let flashDuration = 1000; // Default flash duration
   
-    // Adjust flash duration based on currentScore
     if (currentScore <= 5) {
       flashDuration = 750;
     } else if (currentScore <= 9) {
@@ -149,48 +143,47 @@ function startGame() {
       flashDuration = 250;
     }
   
-    return new Promise((resolve, reject) => { //creates a promise that if the user successfully does the sequence it creates a new promise however if not a error occurs
+    return new Promise((resolve, reject) => {
       panel.classList.add('active'); //flashes colour
       setTimeout(() => { 
         panel.classList.remove('active'); // unflash colour
         setTimeout(() => {
           resolve();
         }, 250);
-      }, flashDuration); //depending on current score, its sets the delay between sequence
+      }, flashDuration);
     });
   };
   
   
   
   let canClick = false; // ensures user cant click
-  let currentScore = 0; // creates the currentscore
-  let highScore = currentScore; // set the highScore equal to currentscore
+  let currentScore = 0; 
+  let highScore = currentScore; 
   
   const panelClicked = panelClicked => {
-    if (!canClick) return; // Ensures user can't click if not allowed
+    if (!canClick) return; 
   
-    const expectedPanel = sequenceToGuess.shift(); // Removes panel from sequence if guessed
-    if (expectedPanel === panelClicked) { // If the guess matches
-      if (sequenceToGuess.length === 0) { // If the sequence length = 0, wins round
-        sequence.push(getRandomPanel()); // Add new panel to sequence
-        sequenceToGuess = [...sequence]; // Changes the new sequence to guess
+    const expectedPanel = sequenceToGuess.shift(); 
+    if (expectedPanel === panelClicked) { 
+      if (sequenceToGuess.length === 0) { 
+        sequence.push(getRandomPanel()); 
+        sequenceToGuess = [...sequence]; 
         currentScore++; // Increment the score
         if (highScore < currentScore) {
           highScore = currentScore; // Updates the high score
         }
         document.querySelector(".score").textContent = currentScore.toString(); // Update the score display
         document.querySelector(".highscore").textContent = highScore.toString(); // Update the high score display
-        clearTimeout(responseTimeout); // Clear the "Too slow" timeout
+        clearTimeout(responseTimeout);
         startFlashing(); // Start flashing the new sequence including the new panel
       }
     } else {
-      clearTimeout(responseTimeout); // IMPORTANT: Clear the "Too slow" timeout upon wrong answer
+      clearTimeout(responseTimeout); 
       flashAllButtons().then(() => {
-        // Optionally, you might want to delay showing the alert and restarting to let the flash finish
         setTimeout(() => {
-          alert('Game over!'); // Show game over alert
-          startGame(); // Restart the game
-        }, 1000); // Delay to ensure the flashAllButtons animation can be seen
+          alert('Game over!');
+          startGame();
+        }, 1000); 
       });
     }
   };
