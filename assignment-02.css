@@ -22,10 +22,10 @@ body{
     left: 50%;
     margin-top: -250px;
     margin-left: -250px;
-    background-image: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
+    background-image: linear-gradient(rgb(36, 36, 36), rgb(0, 0, 0));
     outline-style:groove;
     outline-width: 5px;
-
+    z-index: 1;
 }
 
 .shape.active {
@@ -49,10 +49,13 @@ body{
     position: absolute;
     left: -100px;
     top: -100px;
+    /*
     outline-style: outset;
     outline-width: 15px;
+    */
     background-image: linear-gradient(white, rgb(0, 255, 0));
     cursor: pointer;
+    z-index: 3;
 }
 
 .two{
@@ -62,10 +65,13 @@ body{
     position: absolute;
     left: 350px;
     top: -100px;
+    /*
     outline-style: outset;
     outline-width: 15px;
+    */
     background-image: linear-gradient(white, rgb(255, 0, 0));
     cursor: pointer;
+    z-index: 3;
 
 }
 
@@ -76,10 +82,13 @@ body{
     position: absolute;
     left: 350px;
     top: 350px;
+    /*
     outline-style: outset;
     outline-width: 15px;
+    */
     background-image: linear-gradient(rgb(255, 255, 255), rgb(0, 4, 255));
     cursor: pointer;
+    z-index: 3;
 
 }
 
@@ -91,10 +100,13 @@ body{
     position: absolute;
     left: -100px;
     top: 350px;
+    /*
     outline-style: outset;
     outline-width: 15px;
+    */
     background-image: linear-gradient(white, rgb(255, 230, 0));
     cursor: pointer;
+    z-index: 3;
 
 }
 
@@ -148,4 +160,54 @@ body{
     top: 330px;
     background-color: red;
     
+}
+
+
+.green{
+    background-color: black;
+    height: 290px;
+    width: 290px;
+    z-index: 2;
+    position: absolute;
+    left: -120px;
+    top: -120px;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(58, 58, 58));
+
+}
+.red{
+    background-color: black;
+    height: 290px;
+    width: 290px;
+    z-index: 2;
+    position: absolute;
+    left: 330px;
+    top: -120px;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(58, 58, 58));
+
+}
+.blue{
+    background-color: black;
+    height: 290px;
+    width: 290px;
+    z-index: 2;
+    position: absolute;
+    left: 330px;
+    top: 330px;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(58, 58, 58));
+
+}
+.yellow{
+    background-color: black;
+    height: 290px;
+    width: 290px;
+    z-index: 2;
+    position: absolute;
+    left: -120px;
+    top: 330px;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(58, 58, 58));
+
 }
